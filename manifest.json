@@ -1,0 +1,19 @@
+{
+  "name": "IDS-TO-CODE",
+  "id": "1417290996848654451",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": ["codegen"],
+  "codegenLanguages": [
+    {
+      "label": "css object",
+      "value": "javascript"
+    }
+  ],
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "editorType": ["dev"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}
