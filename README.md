@@ -1,40 +1,23 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+# STEP
 
-  https://www.figma.com/plugin-docs/plugin-quickstart-guide/
+1. css를 우리에게 맞춰 변환하기
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+- 디자인 시스템에 사용된 token값 등
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+```
+// ASIS
+borderRadius: "var(--border-radius-md, 8px)",
 
-  https://nodejs.org/en/download/
+// TOBE
+borderRadius: "md",
+```
 
-Next, install TypeScript using the command:
+2. 디자인 시스템에 있는 컴포넌트를 바로 복사 붙여넣기 해서 사용할 수 있도록 코드 제공
 
-  npm install -g typescript
+- 피그마 시안을 디자인시스템 사용 코드로 자동 변환하여 프론트엔드 개발자의 개발 효율성을 높이고, 디자인 시스템을 사용할 수 있도록 돕는다.
+- 피그마 구조에 대한 이해가 좀 필요해 보인다.(componentNode, InstanceNode, ComponentSetNode...)
+- 컴포넌트 정보 추출을 위해 디자이너의 도움도 필요할 수 있음
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+[참고링크](https://8percent.github.io/2024-07-15/frontend-eds-improvement/)
 
-  npm install --save-dev @figma/plugin-typings
-
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
-
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
-
-For more information, visit https://www.typescriptlang.org/
-
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
-
-We recommend writing TypeScript code using Visual Studio code:
-
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
-
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+![alt text](image.png)
